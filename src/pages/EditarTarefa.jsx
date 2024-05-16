@@ -18,7 +18,7 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
         setFimTarefa(tarefa.fimTarefa);
         setRecursoTarefa(tarefa.recursoTarefa);
         setStatusTarefa(tarefa.statusTarefa);
-    }, []);
+    },[]);
 
     const handleRecurso = (event) => {
         setRecursoTarefa(event.target.value);
@@ -32,16 +32,16 @@ const EditarTarefa = ({handleCloseEditar, idTarefaSelecionada, tarefas, tarefa, 
         setTarefas(current =>
             current.map(obj => {
                 if (obj.idTarefa === idTarefaSelecionada) {
-                    console.log('obj: ' + JSON.stringify(obj));          
-                    return {...obj, 
-                        idTarefa:idTarefaSelecionada,
-                        tituloTarefa:tituloTarefa,
-                        descricaoTarefa:descricaoTarefa,
-                        inicioTarefa:inicioTarefa,
-                        fimTarefa:fimTarefa,
-                        recursoTarefa:recursoTarefa,
-                        statusTarefa:statusTarefa
-                    };
+                console.log('obj: ' + JSON.stringify(obj));          
+                return {...obj, 
+                    idTarefa:idTarefaSelecionada,
+                    tituloTarefa:tituloTarefa,
+                    descricaoTarefa:descricaoTarefa,
+                    inicioTarefa:inicioTarefa,
+                    fimTarefa:fimTarefa,
+                    recursoTarefa:recursoTarefa,
+                    statusTarefa:statusTarefa
+                };
                 }
 
                 return obj;

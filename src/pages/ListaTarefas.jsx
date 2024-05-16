@@ -120,7 +120,7 @@ const ListarTarefa = () => {
                 </CardContent>
                 <CardActions sx={{ marginLeft: '8px' }}>
                     <Button size="small" variant="contained" sx={{ background: '#4527a0' }} onClick={handleOpen}>Criar Tarefa</Button>
-                    <Button size="small" variant="outlined">Cancelar</Button>
+                    <Button size="small" variant="outlined" sx={{ color: '#4527a0', borderColor: '#4527a0' }}>Cancelar</Button>
                 </CardActions>
             </Card>
             <div>
